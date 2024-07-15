@@ -1,0 +1,13 @@
+# ~/.config/tmuxinator/project.yml
+name: Tmux
+root: ~/.config/tmux
+
+windows:
+  - editor:
+      layout: main-vertical
+      panes:
+        - nvim tmux.conf
+        - zsh
+      sizes:
+        - 70%  
+        - 30%

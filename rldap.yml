@@ -1,0 +1,20 @@
+name: RLdap
+root: ~/Development/RUST/opendr
+
+windows:
+  - editor:
+      panes:
+        - nvim .
+  - builder: 
+      layout: even-horizontal
+      panes:
+        - cargo build
+        - cargo test
+      sizes:
+        - 70%  # Server pane width
+        - 30%  # Top pane width
+  - logs: 
+      layout: main-vertical
+      panes:
+        - tail -f log/server.log
+
