@@ -1,0 +1,16 @@
+name: Kafka
+root: ~/Development/Kafka/kafka/
+
+windows:
+  - servers:
+      layout: even-vertical
+      panes:
+        - bin/zookeeper-server-start.sh config/zookeeper.properties
+        - bin/kafka-server-start.sh config/server.properties
+  - monitor: 
+      layout: even-vertical
+      panes:
+        - bin/kafka-console-producer.sh --topic=another-topic --broker-list=localhost:9094
+        - bin/kafka-console-consumer.sh --topic=another-topic --bootstrap-server=localhost:9092
+
+
